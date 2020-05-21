@@ -7,6 +7,14 @@ const STORE = [
   {id: cuid(), name: "bread", checked: false}
 ];
 
+// INIT
+function handleShoppingList() {
+  renderShoppingList();
+  handleNewItemSubmit();
+  handleItemCheckClicked();
+  handleDeleteItemClicked();
+}
+
 
 function generateItemElement(item) {
   return `
@@ -99,13 +107,7 @@ function handleDeleteItemClicked() {
   
 }
 
-//
-function handleShoppingList() {
-  renderShoppingList();
-  handleNewItemSubmit();
-  handleItemCheckClicked();
-  handleDeleteItemClicked();
-}
+
 
 // when the page loads, call `handleShoppingList`
 $(handleShoppingList);
